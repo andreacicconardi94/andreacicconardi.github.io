@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My webpage</title>
     <style>
+        .left-section {
+            float: left;
+            width: 30%;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .name {
+            font-size: 2em;
+            color: #007BFF; /* Blu */
+            font-weight: bold;
+        }
+
+        .description {
+            margin-top: 20px;
+        }
+
+        .right-section {
+            margin-left: 32%; /* La larghezza della parte sinistra più uno spazio */
+            padding: 20px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: block;
+            margin-bottom: 10px;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -22,27 +56,23 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome on my webpage</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Who am I?</h2>
-            <p>Hi, I am Andrea Cicconardi and this is my personal webpage on GitHub.</p>
-        </section>
-        
-        <section>
-            <h2>Curriculum Vitae</h2>
-            <p>You can download my CV <a href="CV_Andrea_Cicconardi.pdf" target="_blank">here</a>.</p>
-        </section>
-
-        <section>
-            <h2>Contact me</h2>
-            <p>You can write me at andrea.cicconardi@iit.it.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Andrea Cicconardi</p>
-    </footer>
+    <div class="left-section">
+        <div class="name">Andrea Cicconardi</div>
+        <img src="Foto Ricerca.PNG" alt="Andrea Cicconardi">
+        <div class="description">
+            <!-- I am a researcher -->
+        </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/andrea-cicconardi-073734145/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/andreacicconardi94" target="_blank">GitHub</a>
+            <a href="CV_Andrea_Cicconardi.pdf" target="_blank">Curriculum Vitae</a>
+        </div>
+    </div>
+    <div class="right-section">
+        <h2>Projexts</h2>
+        <div class="project">
+            <!-- Descrivi qui i tuoi progetti -->
+        </div>
+    </div>
 </body>
 </html>
