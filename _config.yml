@@ -1,71 +1,61 @@
-# Where things are
-source              : .
-destination         : ./_site
-collections_dir     : .
-plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
-layouts_dir         : _layouts
-data_dir            : _data
-includes_dir        : _includes
-sass:
-  sass_dir: _sass
+# Base configuration
+exclude: [".rvmrc", ".rbenv-version", "README.md", "changelog.md"]
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
 collections:
-  posts:
-    output          : true
+  pages:
+    output: true
+    permalink: /:path/
 
-# Handling Reading
-safe                : false
-include             : [".htaccess"]
-exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
-keep_files          : [".git", ".svn"]
-encoding            : "utf-8"
-markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
-strict_front_matter : false
+# Title
+name: DCgov Guides Template
 
-# Filtering Content
-show_drafts         : null
-limit_posts         : 0
-future              : false
-unpublished         : false
+# Author/Organization info to be displayed in the templates
+author:
+  name: Office of the Chief Technology Officer
+  url: http://octo.dc.gov
 
-# Plugins
-whitelist           : []
-plugins             : []
+# When using this template with a project (repository) page set the baseurl to '/project-name'
+# For user/organization pages set this to an empty string
+# When working locally use jekyll serve --baseurl '' so that you can view everything at localhost:4000
+# See http://jekyllrb.com/docs/github-pages/ for more info
+baseurl: '/guides-template'
 
-# Conversion
-markdown            : kramdown
-highlighter         : rouge
-lsi                 : false
-excerpt_separator   : "\n\n"
-incremental         : false
+# Point the logo URL at a file in your repo or hosted elsewhere by your organization
+logourl: /assets/img/dc_logo.png
+logoalt: The D.C. flag
 
-# Serving
-detach              : false
-port                : 4000
-host                : 127.0.0.1
-baseurl             : "" # does not include hostname
-show_dir_listing    : false
+# Navigation
+# List links that should appear in the site sidebar here
+navigation:
+- text: Introduction
+  internal: true
+  url: ./
+- text: Add a new page
+  internal: true
+  url: add-a-new-page
+- text: Configure the Guide
+  internal: true
+  url: configure-the-guide
+- text: GitHub Setup
+  internal: true
+  url: github
+- text: Create a Glossary
+  glossary: true
+- text: Edit this Repo
+  internal: false
+  url: https://github.com/DCgov/guides-template
 
-# Outputting
-permalink           : date
-paginate_path       : /page:num
-timezone            : null
+# Repo list
+# List repos that you would like to appear on the homepage here
+repos:
+- name: guides-template
+  description: 
+  url: https://github.com/DCgov/guides-template
 
-quiet               : false
-verbose             : false
-defaults            : []
+google_analytics_ua: 
 
-liquid:
-  error_mode        : warn
-  strict_filters    : false
-  strict_variables  : false
-
-# Markdown Processors
-kramdown:
-  auto_ids          : true
-  entity_output     : as_char
-  toc_levels        : [1, 2, 3, 4, 5, 6]
-  smart_quotes      : lsquo,rsquo,ldquo,rdquo
-  input             : GFM
-  hard_wrap         : false
-  footnote_nr       : 1
-  show_warnings     : false
+# Style Variables
+brand_color: "#DA253B"
